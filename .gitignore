@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+drafts.js
+jsconfig.json
+.prettierrc
+.vscode

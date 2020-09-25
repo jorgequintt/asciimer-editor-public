@@ -1,0 +1,187 @@
+@import "normalize.css";
+/* @import "~@blueprintjs/core/lib/css/blueprint.css"; */
+/* @import "custom_blueprint.css"; */
+@import "custom_blueprint_v2.css";
+@import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+@font-face {
+    font-family: "Adobe Blank";
+    src: url("fonts/AdobeBlankRegular.ttf");
+}
+
+/* body {
+    padding: 50px 0px 0px 0px;
+} */
+
+html {
+    /* background-color: #5c7080; */
+    /* background-color: #30404d; */
+    background-color: #293742;
+    overflow: hidden;
+}
+
+/* jq */
+.jq-panel {
+}
+
+/* Disable tab indicator */
+.bp3-tab-indicator {
+    display: none;
+}
+
+/* Disable text selection */
+body *:not(input) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* move icon on panel titles */
+.jq-move-cursor {
+    cursor: move;
+}
+
+.jq-grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jq-grid-wrapper.jq-square-grid {
+    overflow-y: scroll;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.jq-grid-wrapper .jq-grid {
+    height: 100%;
+}
+.jq-grid-wrapper.jq-square-grid .jq-grid {
+    height: 0;
+}
+
+.jq-grid-wrapper.jq-square-grid:before {
+    content: "";
+    float: left;
+    padding-top: 100%;
+}
+
+.jq-grid-cell {
+    flex-basis: calc(100% / 16);
+    border: 1px solid #ffffff13;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+}
+
+.jq-grid-cell-brush {
+    /* flex-basis: calc(100% / 16); */
+    height: 70px;
+    width: 70px;
+    border: 1px solid #ffffff13;
+    box-sizing: border-box;
+}
+
+.jq-grid-cell:hover,
+.jq-grid-cell-brush:hover {
+    border: 1px solid #ffffffbe;
+}
+
+.jq-grid-cell.jq-grid-cell-on-palette {
+    border: 2px solid #3d91ffe0;
+}
+
+.jq-grid-cell.jq-grid-cell-selected,
+.jq-grid-cell-brush.jq-grid-cell-selected {
+    border: 3px solid #a0ffd3;
+}
+
+.jq-grid-cell.jq-grid-cell-for-replacement {
+    border: 2px solid #ff2e2e;
+}
+
+.jq-grid-cell.jq-grid-cell-selected.fg:not(.bg)::after {
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    content: "F";
+    z-index: 1;
+}
+
+.jq-grid-cell.jq-grid-cell-selected.bg:not(.fg)::after {
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    content: "B";
+    z-index: 1;
+}
+
+.jq-grid-cell.jq-grid-cell-selected.fg.bg::after {
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    content: "2";
+    z-index: 1;
+}
+
+.jq-grid-cell::before {
+    content: "";
+    /* float: left; */
+    padding-top: 100%;
+}
+
+/* SCROLLBAR */
+body *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    background-color: #f5f5f500;
+}
+
+body *::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f500;
+}
+
+body *::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+.chrome-picker {
+    width: 100% !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.chrome-picker .flexbox-fix:nth-child(2) {
+    display: none !important;
+}
+
+.tabsSpaced .bp3-tab-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .bp3-overlay-backdrop {
+    pointer-events: none;
+} */
+
+.jq-shortcuts-table h4 {
+    margin-top: 16px;
+}
+.jq-shortcuts-table tbody {
+    display: block;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.jq-shortcuts-table thead,
+.jq-shortcuts-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.jq-shortcuts-table thead {
+    width: calc(100% - 1.1em);
+}
